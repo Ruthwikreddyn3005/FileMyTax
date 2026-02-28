@@ -1,0 +1,11 @@
+serviceWorker.js
+
+# don't worry about generated files
+/src/core/data/validate-fns.js
+
+# Server has its own tsconfig — exclude from root ESLint
+server/
+
+# Config files not covered by tsconfig
+.eslintrc.js
+notice.js

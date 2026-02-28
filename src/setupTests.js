@@ -1,0 +1,22 @@
+/* eslint-disable */
+// jest-dom adds custom jest matchers for asserting on DOM nodes.
+// allows you to do things like:
+// expect(element).toHaveTextContent(/react/i)
+
+import '@testing-library/jest-dom/extend-expect'
+
+const localStorageMock = {
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  clear: jest.fn()
+}
+global.localStorage = localStorageMock
+
+global.console = {
+  log: jest.fn(),
+  error: jest.fn(),
+
+  warn: console.warn,
+  info: console.info,
+  debug: console.debug
+}

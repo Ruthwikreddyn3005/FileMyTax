@@ -1,0 +1,124 @@
+body {
+  height: 100vh;
+}
+
+/* MUI Grid spacing */
+.MuiGrid-container ~ .MuiGrid-container {
+  margin-top: 8px;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Text selection color matching primary red */
+::selection {
+  background-color: rgba(218, 68, 83, 0.18);
+  color: inherit;
+}
+
+/* Native element typography for non-MUI content areas */
+.tax-content h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.25;
+  color: #da4453;
+  letter-spacing: -0.01em;
+}
+
+.tax-content h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.6rem 0 0.5rem 0;
+  line-height: 1.35;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid rgba(218, 68, 83, 0.2);
+  color: #da4453;
+}
+
+.tax-content h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0 0.4rem 0;
+  line-height: 1.4;
+  color: #363636;
+}
+
+.tax-content p {
+  margin: 0.5rem 0 0.75rem 0;
+  line-height: 1.65;
+  color: #6b6b6b;
+}
+
+.tax-content ul {
+  margin: 0.25rem 0 0.75rem 0;
+  padding-left: 1.4rem;
+}
+
+.tax-content li {
+  margin: 0.3rem 0;
+  line-height: 1.55;
+  color: #6b6b6b;
+}
+
+/* ── Sidebar nav active indicator ── */
+.MuiDrawer-root .MuiListItem-button.Mui-selected {
+  border-left: 3px solid #da4453;
+  padding-left: 13px; /* 16px default - 3px border */
+}
+
+/* ── Form label weight ── */
+.MuiFormLabel-root {
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+}
+
+/* ── Input field spacing ── */
+.MuiFormControl-root {
+  margin-bottom: 4px;
+}
+
+/* ── Outlined button border thickness ── */
+.MuiButton-outlined {
+  border-width: 1.5px !important;
+}
+
+/* ── Dark mode adjustments ── */
+@media (prefers-color-scheme: dark) {
+  .tax-content h1,
+  .tax-content h2 {
+    color: #e06a76;
+  }
+
+  .tax-content h2 {
+    border-bottom-color: rgba(224, 106, 118, 0.25);
+  }
+
+  .tax-content h3 {
+    color: #d0d0d0;
+  }
+
+  .tax-content p,
+  .tax-content li {
+    color: #aaaaaa;
+  }
+}
